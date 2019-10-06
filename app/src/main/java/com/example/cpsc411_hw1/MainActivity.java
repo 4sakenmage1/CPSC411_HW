@@ -3,6 +3,7 @@ package com.example.cpsc411_hw1;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.graphics.Color;
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.view.Gravity;
 import android.view.View;
@@ -31,65 +32,523 @@ public class MainActivity extends AppCompatActivity {
         main.setRowCount(11);
 
         //Title
-        TextView tv1 = new TextView(this);
-        tv1.setText("Rules void hello1(int hour)");
-        tv1.setTextSize(14);
-        tv1.setBackgroundColor(Color.BLACK);
-        tv1.setTextColor(Color.WHITE);
+        TextView tv = new TextView(this);
+        tv.setText("Rules void hello1(int hour)");
+        tv.setTextSize(14);
+        tv.setBackgroundColor(Color.BLACK);
+        tv.setTextColor(Color.WHITE);
 
-        GridLayout.Spec rowSpec1 = GridLayout.spec(0,1,1f);
-        GridLayout.Spec colSpec1 = GridLayout.spec(0,4,1f);
-        GridLayout.LayoutParams vParams1 = new GridLayout.LayoutParams(rowSpec1,colSpec1);
-        tv1.setGravity(Gravity.CENTER_HORIZONTAL | Gravity.CENTER_VERTICAL);
-        tv1.setLayoutParams(vParams1);
+        GridLayout.Spec rowSpec = GridLayout.spec(0,1,1f);
+        GridLayout.Spec colSpec = GridLayout.spec(0,4,1f);
+        GridLayout.LayoutParams vParams = new GridLayout.LayoutParams(rowSpec,colSpec);
+        tv.setGravity(Gravity.CENTER_HORIZONTAL | Gravity.CENTER_VERTICAL);
+        tv.setLayoutParams(vParams);
 
-        main.addView(tv1);
+        main.addView(tv);
 
         //Properites
-        TextView tv2 = new TextView(this);
-        tv2.setText("properties");
-        tv2.setTextSize(14);
-        tv2.setBackgroundColor(Color.WHITE);
-        tv2.setTextColor(Color.BLACK);
+        tv = new TextView(this);
+        tv.setText("properties");
+        tv.setTextSize(14);
+        tv.setBackgroundColor(Color.WHITE);
+        tv.setTextColor(Color.BLACK);
 
-        GridLayout.Spec rowSpec2 = GridLayout.spec(1,2,1f);
-        GridLayout.Spec colSpec2 = GridLayout.spec(0,1,1f);
-        GridLayout.LayoutParams vParams2 = new GridLayout.LayoutParams(rowSpec2,colSpec2);
-        tv2.setGravity(Gravity.CENTER_HORIZONTAL | Gravity.CENTER_VERTICAL);
-        tv2.setLayoutParams(vParams2);
-        main.addView(tv2);
+        rowSpec = GridLayout.spec(1,2,1f);
+        colSpec = GridLayout.spec(0,1,1f);
+        vParams = new GridLayout.LayoutParams(rowSpec,colSpec);
+        tv.setGravity(Gravity.CENTER_HORIZONTAL | Gravity.CENTER_VERTICAL);
+        tv.setLayoutParams(vParams);
+        main.addView(tv);
 
         //Name
-        TextView tv3 = new TextView(this);
-        tv3.setText("name");
-        tv3.setTextSize(14);
-        tv3.setBackgroundColor(Color.WHITE);
-        tv3.setTextColor(Color.BLACK);
+        tv = new TextView(this);
+        tv.setText("name");
+        tv.setTextSize(14);
+        tv.setBackgroundColor(Color.WHITE);
+        tv.setTextColor(Color.BLACK);
 
-        GridLayout.Spec rowSpec3 = GridLayout.spec(1,1,1f);
-        GridLayout.Spec colSpec3 = GridLayout.spec(0,2,1f);
-        GridLayout.LayoutParams vParams3 = new GridLayout.LayoutParams(rowSpec3,colSpec3);
-        tv2.setGravity(Gravity.CENTER_HORIZONTAL | Gravity.CENTER_VERTICAL);
-        tv2.setLayoutParams(vParams3);
-        main.addView(tv3);
+        rowSpec = GridLayout.spec(1,1,1f);
+        colSpec = GridLayout.spec(1,1,1f);
+        vParams = new GridLayout.LayoutParams(rowSpec,colSpec);
+        tv.setGravity(Gravity.CENTER_HORIZONTAL | Gravity.CENTER_VERTICAL);
+        tv.setLayoutParams(vParams);
+        main.addView(tv);
 
         //Day Hour Classification
-        TextView tv4 = new TextView(this);
-        tv4.setText("Day Hour Classification");
-        tv4.setTextSize(14);
-        tv4.setBackgroundColor(Color.WHITE);
-        tv4.setTextColor(Color.BLACK);
+        tv = new TextView(this);
+        tv.setText("Day Hour Classification");
+        tv.setTextSize(14);
+        tv.setBackgroundColor(Color.WHITE);
+        tv.setTextColor(Color.BLACK);
 
-        GridLayout.Spec rowSpec4 = GridLayout.spec(1,1,1f);
-        GridLayout.Spec colSpec4 = GridLayout.spec(0,1,1f);
-        GridLayout.LayoutParams vParams4 = new GridLayout.LayoutParams(rowSpec4,colSpec4);
-        tv2.setGravity(Gravity.CENTER_HORIZONTAL | Gravity.CENTER_VERTICAL);
-        tv2.setLayoutParams(vParams4);
-        main.addView(tv4);
+        rowSpec = GridLayout.spec(1,1,1f);
+        colSpec = GridLayout.spec(2,2,1f);
+        vParams = new GridLayout.LayoutParams(rowSpec,colSpec);
+        tv.setGravity(Gravity.CENTER_HORIZONTAL | Gravity.CENTER_VERTICAL);
+        tv.setLayoutParams(vParams);
+        main.addView(tv);
+
+        //Category
+        tv = new TextView(this);
+        tv.setText("category");
+        tv.setTextSize(14);
+        tv.setBackgroundColor(Color.WHITE);
+        tv.setTextColor(Color.BLACK);
+
+        rowSpec = GridLayout.spec(2,1,1f);
+        colSpec = GridLayout.spec(1,1,1f);
+        vParams = new GridLayout.LayoutParams(rowSpec,colSpec);
+        tv.setGravity(Gravity.CENTER_HORIZONTAL | Gravity.CENTER_VERTICAL);
+        tv.setLayoutParams(vParams);
+        main.addView(tv);
+
+        //Day and time
+        tv = new TextView(this);
+        tv.setText("Day and Time");
+        tv.setTextSize(14);
+        tv.setBackgroundColor(Color.WHITE);
+        tv.setTextColor(Color.BLACK);
+
+        rowSpec = GridLayout.spec(2,1,1f);
+        colSpec = GridLayout.spec(2,2,1f);
+        vParams = new GridLayout.LayoutParams(rowSpec,colSpec);
+        tv.setGravity(Gravity.CENTER_HORIZONTAL | Gravity.CENTER_VERTICAL);
+        tv.setLayoutParams(vParams);
+        main.addView(tv);
+
+
+        //Rule
+        tv = new TextView(this);
+        tv.setText("Rule");
+        tv.setTextSize(14);
+        tv.setTypeface(null, Typeface.BOLD);
+        tv.setBackgroundColor(Color.CYAN);
+        tv.setTextColor(Color.BLACK);
+
+        rowSpec = GridLayout.spec(3,1,1f);
+        colSpec = GridLayout.spec(0,1,1f);
+        vParams = new GridLayout.LayoutParams(rowSpec,colSpec);
+        tv.setGravity(Gravity.CENTER_HORIZONTAL | Gravity.CENTER_VERTICAL);
+        tv.setLayoutParams(vParams);
+        main.addView(tv);
+
+        //C1
+        tv = new TextView(this);
+        tv.setText("C1");
+        tv.setTextSize(14);
+        tv.setTypeface(null, Typeface.BOLD);
+        tv.setBackgroundColor(Color.CYAN);
+        tv.setTextColor(Color.BLACK);
+
+        rowSpec = GridLayout.spec(3,1,1f);
+        colSpec = GridLayout.spec(1,1,1f);
+        vParams = new GridLayout.LayoutParams(rowSpec,colSpec);
+        tv.setGravity(Gravity.CENTER_HORIZONTAL | Gravity.CENTER_VERTICAL);
+        tv.setLayoutParams(vParams);
+        main.addView(tv);
+
+        //A1
+        tv = new TextView(this);
+        tv.setText("A1");
+        tv.setTextSize(14);
+        tv.setTypeface(null, Typeface.BOLD);
+        tv.setBackgroundColor(Color.CYAN);
+        tv.setTextColor(Color.BLACK);
+
+        rowSpec = GridLayout.spec(3,1,1f);
+        colSpec = GridLayout.spec(2,2,1f);
+        vParams = new GridLayout.LayoutParams(rowSpec,colSpec);
+        tv.setGravity(Gravity.CENTER_HORIZONTAL | Gravity.CENTER_VERTICAL);
+        tv.setLayoutParams(vParams);
+        main.addView(tv);
+
+
+        // " "
+        tv = new TextView(this);
+        tv.setText(" ");
+        tv.setTextSize(14);
+        tv.setBackgroundColor(Color.CYAN);
+        tv.setTextColor(Color.BLACK);
+
+        rowSpec = GridLayout.spec(4,1,1f);
+        colSpec = GridLayout.spec(0,1,1f);
+        vParams = new GridLayout.LayoutParams(rowSpec,colSpec);
+        tv.setGravity(Gravity.CENTER_HORIZONTAL | Gravity.CENTER_VERTICAL);
+        tv.setLayoutParams(vParams);
+        main.addView(tv);
+
+        //min <= hour && hour <= max
+        tv = new TextView(this);
+        tv.setText("min<=hour && hour<=max");
+        tv.setTextSize(11);
+        tv.setBackgroundColor(Color.CYAN);
+        tv.setTextColor(Color.BLACK);
+
+        rowSpec = GridLayout.spec(4,1,1f);
+        colSpec = GridLayout.spec(1,1,1f);
+        vParams = new GridLayout.LayoutParams(rowSpec,colSpec);
+        tv.setGravity(Gravity.CENTER_HORIZONTAL | Gravity.CENTER_VERTICAL);
+        tv.setLayoutParams(vParams);
+        main.addView(tv);
+
+        //"System.out.println(greeting + \", World!\")"
+        tv = new TextView(this);
+        tv.setText("System.out.println(greeting + \", World!\")");
+        tv.setTextSize(11);
+        tv.setBackgroundColor(Color.CYAN);
+        tv.setTextColor(Color.BLACK);
+
+        rowSpec = GridLayout.spec(4,1,1f);
+        colSpec = GridLayout.spec(2,2,1f);
+        vParams = new GridLayout.LayoutParams(rowSpec,colSpec);
+        tv.setGravity(Gravity.CENTER_HORIZONTAL | Gravity.CENTER_VERTICAL);
+        tv.setLayoutParams(vParams);
+        main.addView(tv);
+
+        // " "
+        tv = new TextView(this);
+        //tv.setText("");
+        tv.setTextSize(12);
+        tv.setBackgroundColor(Color.CYAN);
+        tv.setTextColor(Color.BLACK);
+
+        rowSpec = GridLayout.spec(5,1,1f);
+        colSpec = GridLayout.spec(0,1, 1f);
+        vParams = new GridLayout.LayoutParams(rowSpec,colSpec);
+        tv.setGravity(Gravity.CENTER_HORIZONTAL);
+        tv.setLayoutParams(vParams);
+        main.addView(tv);
+
+
+        // int min
+        tv = new TextView(this);
+        tv.setText("int min");
+        tv.setTextSize(12);
+        tv.setBackgroundColor(Color.CYAN);
+        tv.setTextColor(Color.BLACK);
+
+        rowSpec = GridLayout.spec(5,1,1f);
+        colSpec = GridLayout.spec(1,1,1f);
+        vParams = new GridLayout.LayoutParams(rowSpec,colSpec);
+        tv.setGravity(Gravity.CENTER_HORIZONTAL);
+        tv.setLayoutParams(vParams);
+        main.addView(tv);
+
+        // int max
+        tv = new TextView(this);
+        tv.setText("int max");
+        tv.setTextSize(12);
+        tv.setBackgroundColor(Color.CYAN);
+        tv.setTextColor(Color.BLACK);
+
+        rowSpec = GridLayout.spec(5,1,1f);
+        colSpec = GridLayout.spec(2,1,1f);
+        vParams = new GridLayout.LayoutParams(rowSpec,colSpec);
+        tv.setGravity(Gravity.CENTER_HORIZONTAL);
+        tv.setLayoutParams(vParams);
+        main.addView(tv);
+
+        //String Greeting
+        tv = new TextView(this);
+        tv.setText("String Greeting");
+        tv.setTextSize(12);
+        tv.setBackgroundColor(Color.CYAN);
+        tv.setTextColor(Color.BLACK);
+
+        rowSpec = GridLayout.spec(5,1,1f);
+        colSpec = GridLayout.spec(3,1,1f);
+        vParams = new GridLayout.LayoutParams(rowSpec,colSpec);
+        tv.setGravity(Gravity.CENTER_HORIZONTAL);
+        tv.setLayoutParams(vParams);
+        main.addView(tv);
+
+
+        //Rule
+        tv = new TextView(this);
+        tv.setText("Rule");
+        tv.setTextSize(14);
+        tv.setTypeface(null, Typeface.BOLD);
+        tv.setBackgroundColor(Color.WHITE);
+        tv.setTextColor(Color.BLACK);
+
+        rowSpec = GridLayout.spec(6,1,1f);
+        colSpec = GridLayout.spec(0,1,1f);
+        vParams = new GridLayout.LayoutParams(rowSpec,colSpec);
+        tv.setGravity(Gravity.LEFT);
+        tv.setLayoutParams(vParams);
+        main.addView(tv);
+
+        //R20
+        tv = new TextView(this);
+        tv.setText("R10");
+        tv.setTextSize(12);
+        tv.setBackgroundColor(Color.WHITE);
+        tv.setTextColor(Color.BLACK);
+
+        rowSpec = GridLayout.spec(7,1,1f);
+        colSpec = GridLayout.spec(0,1,1f);
+        vParams = new GridLayout.LayoutParams(rowSpec,colSpec);
+        tv.setGravity(Gravity.LEFT);
+        tv.setLayoutParams(vParams);
+        main.addView(tv);
+
+        //R20
+        tv = new TextView(this);
+        tv.setText("R20");
+        tv.setTextSize(12);
+        tv.setBackgroundColor(Color.WHITE);
+        tv.setTextColor(Color.BLACK);
+
+        rowSpec = GridLayout.spec(8,1,1f);
+        colSpec = GridLayout.spec(0,1,1f);
+        vParams = new GridLayout.LayoutParams(rowSpec,colSpec);
+        tv.setGravity(Gravity.LEFT);
+        tv.setLayoutParams(vParams);
+        main.addView(tv);
+
+        //R30
+        tv = new TextView(this);
+        tv.setText("R30");
+        tv.setTextSize(12);
+        tv.setBackgroundColor(Color.WHITE);
+        tv.setTextColor(Color.BLACK);
+
+        rowSpec = GridLayout.spec(9,1,1f);
+        colSpec = GridLayout.spec(0,1,1f);
+        vParams = new GridLayout.LayoutParams(rowSpec,colSpec);
+        tv.setGravity(Gravity.LEFT);
+        tv.setLayoutParams(vParams);
+        main.addView(tv);
+
+        //R40
+        tv = new TextView(this);
+        tv.setText("R40");
+        tv.setTextSize(12);
+        tv.setBackgroundColor(Color.WHITE);
+        tv.setTextColor(Color.BLACK);
+
+        rowSpec = GridLayout.spec(10,1,1f);
+        colSpec = GridLayout.spec(0,1,1f);
+        vParams = new GridLayout.LayoutParams(rowSpec,colSpec);
+        tv.setGravity(Gravity.LEFT);
+        tv.setLayoutParams(vParams);
+        main.addView(tv);
+
+        //From
+        tv = new TextView(this);
+        tv.setText("From");
+        tv.setTextSize(14);
+        tv.setTypeface(null, Typeface.BOLD);
+        tv.setBackgroundColor(Color.YELLOW);
+        tv.setTextColor(Color.BLACK);
+
+        rowSpec = GridLayout.spec(6,1,1f);
+        colSpec = GridLayout.spec(1,1,1f);
+        vParams = new GridLayout.LayoutParams(rowSpec,colSpec);
+        tv.setGravity(Gravity.LEFT);
+        tv.setLayoutParams(vParams);
+        main.addView(tv);
+
+        //0
+        tv = new TextView(this);
+        tv.setText("0");
+        tv.setTextSize(12);
+        tv.setBackgroundColor(Color.YELLOW);
+        tv.setTextColor(Color.BLACK);
+
+        rowSpec = GridLayout.spec(7,1,1f);
+        colSpec = GridLayout.spec(1,1,1f);
+        vParams = new GridLayout.LayoutParams(rowSpec,colSpec);
+        tv.setGravity(Gravity.RIGHT);
+        tv.setLayoutParams(vParams);
+        main.addView(tv);
+
+        //12
+        tv = new TextView(this);
+        tv.setText("12");
+        tv.setTextSize(12);
+        tv.setBackgroundColor(Color.YELLOW);
+        tv.setTextColor(Color.BLACK);
+
+        rowSpec = GridLayout.spec(8,1,1f);
+        colSpec = GridLayout.spec(1,1,1f);
+        vParams = new GridLayout.LayoutParams(rowSpec,colSpec);
+        tv.setGravity(Gravity.RIGHT);
+        tv.setLayoutParams(vParams);
+        main.addView(tv);
+
+        //18
+        tv = new TextView(this);
+        tv.setText("18");
+        tv.setTextSize(12);
+        tv.setBackgroundColor(Color.YELLOW);
+        tv.setTextColor(Color.BLACK);
+
+        rowSpec = GridLayout.spec(9,1,1f);
+        colSpec = GridLayout.spec(1,1,1f);
+        vParams = new GridLayout.LayoutParams(rowSpec,colSpec);
+        tv.setGravity(Gravity.RIGHT);
+        tv.setLayoutParams(vParams);
+        main.addView(tv);
+
+        //2
+        tv = new TextView(this);
+        tv.setText("22");
+        tv.setTextSize(12);
+        tv.setBackgroundColor(Color.YELLOW);
+        tv.setTextColor(Color.BLACK);
+
+        rowSpec = GridLayout.spec(10,1,1f);
+        colSpec = GridLayout.spec(1,1,1f);
+        vParams = new GridLayout.LayoutParams(rowSpec,colSpec);
+        tv.setGravity(Gravity.RIGHT);
+        tv.setLayoutParams(vParams);
+        main.addView(tv);
+
+        //To
+        tv = new TextView(this);
+        tv.setText("To");
+        tv.setTextSize(14);
+        tv.setTypeface(null, Typeface.BOLD);
+        tv.setBackgroundColor(Color.YELLOW);
+        tv.setTextColor(Color.BLACK);
+
+        rowSpec = GridLayout.spec(6,1,1f);
+        colSpec = GridLayout.spec(2,1,1f);
+        vParams = new GridLayout.LayoutParams(rowSpec,colSpec);
+        tv.setGravity(Gravity.LEFT);
+        tv.setLayoutParams(vParams);
+        main.addView(tv);
+
+        //11
+        tv = new TextView(this);
+        tv.setText("11");
+        tv.setTextSize(12);
+        tv.setBackgroundColor(Color.YELLOW);
+        tv.setTextColor(Color.BLACK);
+
+        rowSpec = GridLayout.spec(7,1,1f);
+        colSpec = GridLayout.spec(2,1,1f);
+        vParams = new GridLayout.LayoutParams(rowSpec,colSpec);
+        tv.setGravity(Gravity.RIGHT);
+        tv.setLayoutParams(vParams);
+        main.addView(tv);
+
+        //17
+        tv = new TextView(this);
+        tv.setText("17");
+        tv.setTextSize(12);
+        tv.setBackgroundColor(Color.YELLOW);
+        tv.setTextColor(Color.BLACK);
+
+        rowSpec = GridLayout.spec(8,1,1f);
+        colSpec = GridLayout.spec(2,1,1f);
+        vParams = new GridLayout.LayoutParams(rowSpec,colSpec);
+        tv.setGravity(Gravity.RIGHT);
+        tv.setLayoutParams(vParams);
+        main.addView(tv);
+
+        //21
+        tv = new TextView(this);
+        tv.setText("21");
+        tv.setTextSize(12);
+        tv.setBackgroundColor(Color.YELLOW);
+        tv.setTextColor(Color.BLACK);
+
+        rowSpec = GridLayout.spec(9,1,1f);
+        colSpec = GridLayout.spec(2,1,1f);
+        vParams = new GridLayout.LayoutParams(rowSpec,colSpec);
+        tv.setGravity(Gravity.RIGHT);
+        tv.setLayoutParams(vParams);
+        main.addView(tv);
+
+        //23
+        tv = new TextView(this);
+        tv.setText("23");
+        tv.setTextSize(12);
+        tv.setBackgroundColor(Color.YELLOW);
+        tv.setTextColor(Color.BLACK);
+
+        rowSpec = GridLayout.spec(10,1,1f);
+        colSpec = GridLayout.spec(2,1,1f);
+        vParams = new GridLayout.LayoutParams(rowSpec,colSpec);
+        tv.setGravity(Gravity.RIGHT);
+        tv.setLayoutParams(vParams);
+        main.addView(tv);
 
 
 
+        //Greeting
+        tv = new TextView(this);
+        tv.setText("Greeting");
+        tv.setTextSize(14);
+        tv.setTypeface(null, Typeface.BOLD);
+        tv.setBackgroundColor(Color.RED);
+        tv.setTextColor(Color.BLACK);
 
+        rowSpec = GridLayout.spec(6,1,1f);
+        colSpec = GridLayout.spec(3,1,1f);
+        vParams = new GridLayout.LayoutParams(rowSpec,colSpec);
+        tv.setGravity(Gravity.LEFT);
+        tv.setLayoutParams(vParams);
+        main.addView(tv);
+
+        //Good Morning
+        tv = new TextView(this);
+        tv.setText("Good Morning");
+        tv.setTextSize(11);
+        tv.setBackgroundColor(Color.RED);
+        tv.setTextColor(Color.BLACK);
+
+        rowSpec = GridLayout.spec(7,1,1f);
+        colSpec = GridLayout.spec(3,1,1f);
+        vParams = new GridLayout.LayoutParams(rowSpec,colSpec);
+        tv.setGravity(Gravity.LEFT);
+        tv.setLayoutParams(vParams);
+        main.addView(tv);
+
+        //Good Afternoon
+        tv = new TextView(this);
+        tv.setText("Good Afternoon");
+        tv.setTextSize(12);
+        tv.setBackgroundColor(Color.RED);
+        tv.setTextColor(Color.BLACK);
+
+        rowSpec = GridLayout.spec(8,1,1f);
+        colSpec = GridLayout.spec(3,1,1f);
+        vParams = new GridLayout.LayoutParams(rowSpec,colSpec);
+        tv.setGravity(Gravity.LEFT);
+        tv.setLayoutParams(vParams);
+        main.addView(tv);
+
+        //Good Evening
+        tv = new TextView(this);
+        tv.setText("Good Evening");
+        tv.setTextSize(12);
+        tv.setBackgroundColor(Color.RED);
+        tv.setTextColor(Color.BLACK);
+
+        rowSpec = GridLayout.spec(9,1,1f);
+        colSpec = GridLayout.spec(3,1,1f);
+        vParams = new GridLayout.LayoutParams(rowSpec,colSpec);
+        tv.setGravity(Gravity.LEFT);
+        tv.setLayoutParams(vParams);
+        main.addView(tv);
+
+
+        // Good Night
+        tv = new TextView(this);
+        tv.setText("Good Night");
+        tv.setTextSize(12);
+        tv.setBackgroundColor(Color.RED);
+        tv.setTextColor(Color.BLACK);
+
+        rowSpec = GridLayout.spec(10,1,1f);
+        colSpec = GridLayout.spec(3,1,1f);
+        vParams = new GridLayout.LayoutParams(rowSpec,colSpec);
+        tv.setGravity(Gravity.LEFT);
+        tv.setLayoutParams(vParams);
+        main.addView(tv);
 
 
         setContentView(main);
